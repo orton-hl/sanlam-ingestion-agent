@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:22b1e152c98a7aaa4a8977a171392049b895a3c1e43b6b967c520ce806edd47f"
+content_hash = "sha256:f177528ed01f93772b0f50dd43c4eed34fcdb8c789723751c93446f07e631f40"
 
 [[metadata.targets]]
 requires_python = "==3.10.*"
@@ -55,6 +55,21 @@ marker = "sys_platform == \"win32\""
 files = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
+]
+
+[[package]]
+name = "confluent-kafka"
+version = "2.10.0"
+requires_python = ">=3.7"
+summary = "Confluent's Python client for Apache Kafka"
+groups = ["default"]
+files = [
+    {file = "confluent_kafka-2.10.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:635c62a51ec31ff82864043120dbc7c61eb62abf4e0682cc6ee8526e9b04e16d"},
+    {file = "confluent_kafka-2.10.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:32f5ea8ecee98d1c1afd523115cbdb719a6f87b852c19b8898fa76db95ec5f4a"},
+    {file = "confluent_kafka-2.10.0-cp310-cp310-manylinux_2_28_aarch64.whl", hash = "sha256:46734d24b0e0c8fd84b05174a7338a71eb3a7d34a494e4c458838f89c537508f"},
+    {file = "confluent_kafka-2.10.0-cp310-cp310-manylinux_2_28_x86_64.whl", hash = "sha256:413d7a3d4caca6b2c28dbe86595ef17af83d679edea403bcb75fd5af3bd5afa7"},
+    {file = "confluent_kafka-2.10.0-cp310-cp310-win_amd64.whl", hash = "sha256:7eead1134e3aae9380bf5c923d93e25052cfca5b6a55bf99d11ebadf3ec6f21e"},
+    {file = "confluent_kafka-2.10.0.tar.gz", hash = "sha256:30a346908f3ad49c4bc1cb5557e7a8ce484190f8633aa18f9b87b2620809ac13"},
 ]
 
 [[package]]
@@ -211,6 +226,17 @@ files = [
 ]
 
 [[package]]
+name = "python-dotenv"
+version = "1.1.0"
+requires_python = ">=3.9"
+summary = "Read key-value pairs from a .env file and set them as environment variables"
+groups = ["default"]
+files = [
+    {file = "python_dotenv-1.1.0-py3-none-any.whl", hash = "sha256:d7c01d9e2293916c18baf562d95698754b0dbbb5e74d457c45d4f6561fb9d55d"},
+    {file = "python_dotenv-1.1.0.tar.gz", hash = "sha256:41f90bc6f5f177fb41f53e87666db362025010eb28f60a01c9143bfa33a2b2d5"},
+]
+
+[[package]]
 name = "requests"
 version = "2.32.3"
 requires_python = ">=3.8"
@@ -240,6 +266,17 @@ dependencies = [
 files = [
     {file = "requests-oauthlib-2.0.0.tar.gz", hash = "sha256:b3dffaebd884d8cd778494369603a9e7b58d29111bf6b41bdc2dcd87203af4e9"},
     {file = "requests_oauthlib-2.0.0-py2.py3-none-any.whl", hash = "sha256:7dd8a5c40426b779b0868c404bdef9768deccf22749cde15852df527e6269b36"},
+]
+
+[[package]]
+name = "shortuuid"
+version = "1.0.13"
+requires_python = ">=3.6"
+summary = "A generator library for concise, unambiguous and URL-safe UUIDs."
+groups = ["default"]
+files = [
+    {file = "shortuuid-1.0.13-py3-none-any.whl", hash = "sha256:a482a497300b49b4953e15108a7913244e1bb0d41f9d332f5e9925dba33a3c5a"},
+    {file = "shortuuid-1.0.13.tar.gz", hash = "sha256:3bb9cf07f606260584b1df46399c0b87dd84773e7b25912b7e391e30797c5e72"},
 ]
 
 [[package]]

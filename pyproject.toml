@@ -5,7 +5,7 @@ description = "Default template for PDM package"
 authors = [
     {name = "orton", email = "ortonhlauli@outlook.com"},
 ]
-dependencies = ["tweepy>=4.15.0", "pytest>=8.3.5", "pytest-cov>=6.1.1"]
+dependencies = ["tweepy>=4.15.0", "pytest>=8.3.5", "pytest-cov>=6.1.1", "python-dotenv>=1.1.0", "confluent-kafka>=2.10.0", "shortuuid>=1.0.13"]
 requires-python = "==3.10.*"
 readme = "README.md"
 license = {text = "MIT"}
@@ -13,3 +13,7 @@ license = {text = "MIT"}
 
 [tool.pdm]
 distribution = false
+
+[tool.pdm.scripts]
+start = "python app/__main__.py"
+test = "pytest tests/"
