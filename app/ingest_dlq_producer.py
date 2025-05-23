@@ -1,10 +1,9 @@
-from logging import ERROR, INFO
 import json
-from kafka import ingest_logs_producer
-from util import generate_time_stamp
-import constants
+from logging import ERROR, INFO
+from app import constants, ingest_logs_producer
 from confluent_kafka import Producer
-import constants
+from app.util import generate_time_stamp
+
 
 conf = {
     'bootstrap.servers' : constants.KAFKA_DLQ_BOOTSTRAP_SERVERS
@@ -36,3 +35,4 @@ def send_to_dlq(content: dict, key: str):
 
     producer.produce(constants.KAFKA_INGEST_TOPIC, key=key, value=payload, callback=(dlq_delivery_report))
     producer.flush()
+4

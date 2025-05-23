@@ -1,8 +1,13 @@
 import json
+from logging import _levelToName
 from confluent_kafka import Producer
-from util import generate_time_stamp, generate_trace_id
-from constants import KAFKA_LOGS_BOOTSTRAP_SERVERS, KAFKA_LOGS_TOPIC, ENV, AGENT_META, LOG_LEVEL
-from logging import ERROR, CRITICAL, FATAL, WARNING, WARN, INFO, DEBUG, _levelToName, _nameToLevel
+
+from app.constants import AGENT_META, ENV, KAFKA_LOGS_BOOTSTRAP_SERVERS, KAFKA_LOGS_TOPIC
+from app.util import generate_time_stamp
+# from util import generate_time_stamp, generate_trace_id
+# from constants import KAFKA_LOGS_BOOTSTRAP_SERVERS, KAFKA_LOGS_TOPIC, ENV, AGENT_META, LOG_LEVEL
+# from logging import ERROR, CRITICAL, FATAL, WARNING, WARN, INFO, DEBUG, _levelToName, _nameToLevel
+
 
 conf = {
     'bootstrap.servers' : KAFKA_LOGS_BOOTSTRAP_SERVERS

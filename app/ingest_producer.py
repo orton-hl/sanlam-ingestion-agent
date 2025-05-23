@@ -1,11 +1,10 @@
 from logging import ERROR, DEBUG
 import os
 from confluent_kafka import Producer
-from kafka import ingest_logs_producer, ingest_dlq_producer
-import constants
+from app import constants, ingest_dlq_producer, ingest_logs_producer
+from app.util import generate_time_stamp
 import json
 from confluent_kafka import Producer
-from util import generate_time_stamp, generate_trace_id
 
 conf = { 'bootstrap.servers' : constants.KAFKA_INGEST_BOOTSTRAP_SERVERS }
 producer = Producer(conf)
@@ -23,7 +22,8 @@ def handle_response(err, msg):
     else: 
         key = msg.key().decode('utf-8') if msg.key() else None
         ingest_logs_producer.send_log_message(DEBUG, {
-            "details" : "message delivered"
+            "details" : "message delivered",
+            "key" : key,
         }, key)
 
         print(f"Message delivered to ingest queue {key} [{msg.partition()}]")
