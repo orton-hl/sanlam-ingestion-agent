@@ -1,0 +1,15 @@
+[project]
+name = "ingestion-agent"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "orton", email = "ortonhlauli@outlook.com"},
+]
+dependencies = ["tweepy>=4.15.0", "pytest>=8.3.5", "pytest-cov>=6.1.1"]
+requires-python = "==3.10.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
